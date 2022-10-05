@@ -1,0 +1,47 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;  
+    padding: 0; 
+}
+
+.Typewriter {
+    display: flex;
+    flex-direction: column;
+    color: rgb(8, 6, 6);
+    background: linear-gradient(rgba(18, 17, 17, 0.5), rgba(4, 4, 4, 0.5), rgba(181, 147, 108, 0.5)),url("./images/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-position: center;
+    justify-content: center;
+}
+
+.typing {
+    margin-left: .5rem;
+    position: relative;
+}
+
+.typing::after {
+    content: "";
+    position: absolute;
+    right: -5px;
+    border-right: 2px solid black;
+    height: 6%;
+    width: 1px;
+    animation: blink 450ms infinite ease-in-out;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
